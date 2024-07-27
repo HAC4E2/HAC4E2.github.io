@@ -161,6 +161,7 @@ function showWelcome() {
                             posdesc = "可否带我去武大看樱花？";
                             break;
                     }
+                    break;
                 case "湖南省":
                     posdesc = "74751，长沙斯塔克。";
                     break;

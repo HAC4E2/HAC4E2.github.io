@@ -29,7 +29,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-    let dist = getDistance(113.08673,29.74744, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+    let dist = getDistance(113.1247398,29.7320409, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
@@ -39,7 +39,7 @@ function showWelcome() {
             posdesc = "よろしく，一起去看樱花吗";
             break;
         case "美国":
-            posdesc = "Let us live in peace!";
+            posdesc = "五大湖以南也是湖南！";
             break;
         case "英国":
             posdesc = "想同你一起夜乘伦敦眼";
@@ -57,7 +57,7 @@ function showWelcome() {
             posdesc = "一起去大堡礁吧！";
             break;
         case "加拿大":
-            posdesc = "拾起一片枫叶赠予你";
+            posdesc = "五大湖以北也是湖北！";
             break;
         case "中国":
             pos = ipLoacation.result.ad_info.province + " " + ipLoacation.result.ad_info.city + " " + ipLoacation.result.ad_info.district;
@@ -141,8 +141,26 @@ function showWelcome() {
                     posdesc = "遥望齐州九点烟，一泓海水杯中泻。";
                     break;
                 case "湖北省":
-                    posdesc = "来碗热干面！";
-                    break;
+                    switch (ipLoacation.result.ad_info.city) {
+                        case "武汉市":
+                            posdesc = "来碗武汉热干面！";
+                            break;
+                        case "襄阳市":
+                            posdesc = "来碗襄阳牛肉面！";
+                            break;
+                        case "宜昌市":
+                            posdesc = "想去那养老啦";
+                            break;
+                        case "荆州市":
+                            posdesc = "荆楚大地，锦绣山河，老板来份牛肉锅盔！";
+                            break;
+                        case "潜江市":
+                            posdesc = "来份潜江小龙虾！";
+                            break;
+                        default:
+                            posdesc = "可否带我去武大看樱花？";
+                            break;
+                    }
                 case "湖南省":
                     posdesc = "74751，长沙斯塔克。";
                     break;
@@ -156,7 +174,7 @@ function showWelcome() {
                     posdesc = "朝观日出逐白浪，夕看云起收霞光。";
                     break;
                 case "四川省":
-                    posdesc = "康康川妹子。";
+                    posdesc = "巴适得很！";
                     break;
                 case "贵州省":
                     posdesc = "茅台，学生，再塞200。";
@@ -190,6 +208,9 @@ function showWelcome() {
                     break;
                 case "澳门特别行政区":
                     posdesc = "性感荷官，在线发牌。";
+                    break;
+                case "重庆市":
+                    posdesc = "想和你一起坐船看夜里的长江";
                     break;
                 default:
                     posdesc = "带我去你的城市逛逛吧！";

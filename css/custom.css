@@ -583,7 +583,7 @@ body::-webkit-scrollbar {
 #fps {
   position: fixed;
   /* 指定位置 */
-  left: 10px;
+  right: 20px;
   bottom: 10px;
   z-index: 1919810;
 }
